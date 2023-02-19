@@ -1,1 +1,20 @@
-
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/master
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: spring-app
+            authorization-grant-type: authorization_code
+            scope: openid
+            client-secret: 85396gQ4fsEbE3CfzBqg5wf3KJxmqv4g
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/master
+server:
+  port: 8081
+#  spring-pass
