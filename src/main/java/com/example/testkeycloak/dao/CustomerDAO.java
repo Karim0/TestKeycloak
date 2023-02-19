@@ -13,7 +13,7 @@ import java.util.List;
 @Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class CustomerDAO  {
 
-  private List<CustomerEntity> list = new ArrayList<>();
+  private final List<CustomerEntity> list = new ArrayList<>();
   Integer lastId = 1;
 
   public void save(CustomerEntity entity){
